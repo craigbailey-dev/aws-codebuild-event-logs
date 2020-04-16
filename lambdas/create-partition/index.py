@@ -62,7 +62,7 @@ def handler(event, context):
                     },
                     {
                         "Name": "additional_information",
-                        "Type": "struct<artifact:struct<md5sum:string,sha256sum:string,location:string>,environment:struct<image:string,privileged_mode:boolean,compute_type:string,type:string,environment_variables:array<struct<name:string,type:string,value:string>>>,timeout_in_minutes:float,build_complete:boolean,initiator:string,build_start_time:string,source:struct<location:string,type:string>,logs:struct<group_name:string,stream_name:string,deep_link:string>,phases:struct<phase_context:array<string>,start_time:string,end_time:string,duration_in_seconds:float,phase_type:string,phase_status:string>>"
+                        "Type": "string"
                     }
                 ],
                 "Location": s3_location,
