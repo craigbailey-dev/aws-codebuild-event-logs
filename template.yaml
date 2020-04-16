@@ -117,7 +117,7 @@ Resources:
                   Type: string
                 - 
                   Name: additional_information
-                  Type: struct<artifact:struct<md5sum:string,sha256sum:string,location:string>,environment:struct<image:string,privileged_mode:boolean,compute_type:string,type:string,environment_variables:None>,timeout_in_minutes:integer,build_complete:boolean,initiator:string,build_start_time:string,source:struct<location:string,type:string>,logs:struct<group_name:string,stream_name:string,deep_link:string>,phases:struct<phase_context:None,start_time:string,end_time:string,duration_in_seconds:integer,phase_type:string,phase_status:string>>
+                  Type: struct<artifact:struct<md5sum:string,sha256sum:string,location:string>,environment:struct<image:string,privileged_mode:boolean,compute_type:string,type:string,environment_variables:array<struct<name:string,type:string,value:string>>>,timeout_in_minutes:integer,build_complete:boolean,initiator:string,build_start_time:string,source:struct<location:string,type:string>,logs:struct<group_name:string,stream_name:string,deep_link:string>,phases:struct<phase_context:array<string>,start_time:string,end_time:string,duration_in_seconds:integer,phase_type:string,phase_status:string>>
 
 
   # Lambda function that attempts to create a Glue partition when a log file is put into the S3 bucket
